@@ -300,7 +300,7 @@
 			</config>
 		</view>
 		<view n="104">
-			<name>FCGP Panel View</name>
+			<name>FGCP Panel View</name>
 			<type>lookfrom</type>
 			<internal archive="y">true</internal>
 			<config>
@@ -714,9 +714,8 @@
 					<condition>
 						<not><property>/systems/acconfig/options/keyboard-mode</property></not>
 					</condition>
-					<command>property-assign</command>
-					<property>/sim/current-view/view-number</property>
-					<value>0</value>
+					<command>nasal</command>
+					<script>libraries.setView(1);</script>
 				</binding>
 				<binding>
 					<condition>
@@ -733,9 +732,8 @@
 					<condition>
 						<not><property>/systems/acconfig/options/keyboard-mode</property></not>
 					</condition>
-					<command>property-assign</command>
-					<property>/sim/current-view/view-number</property>
-					<value>8</value>
+					<command>nasal</command>
+					<script>libraries.setView(2);</script>
 				</binding>
 				<binding>
 					<condition>
@@ -752,9 +750,8 @@
 					<condition>
 						<not><property>/systems/acconfig/options/keyboard-mode</property></not>
 					</condition>
-					<command>property-assign</command>
-					<property>/sim/current-view/view-number</property>
-					<value>9</value>
+					<command>nasal</command>
+					<script>libraries.setView(3);</script>
 				</binding>
 				<binding>
 					<condition>
@@ -774,9 +771,8 @@
 					<condition>
 						<not><property>/systems/acconfig/options/keyboard-mode</property></not>
 					</condition>
-					<command>property-assign</command>
-					<property>/sim/current-view/view-number</property>
-					<value>10</value>
+					<command>nasal</command>
+					<script>libraries.setView(4);</script>
 				</binding>
 				<binding>
 					<condition>
@@ -793,9 +789,8 @@
 					<condition>
 						<not><property>/systems/acconfig/options/keyboard-mode</property></not>
 					</condition>
-					<command>property-assign</command>
-					<property>/sim/current-view/view-number</property>
-					<value>11</value>
+					<command>nasal</command>
+					<script>libraries.setView(5);</script>
 				</binding>
 				<binding>
 					<condition>
@@ -816,9 +811,8 @@
 					<condition>
 						<not><property>/systems/acconfig/options/keyboard-mode</property></not>
 					</condition>
-					<command>property-assign</command>
-					<property>/sim/current-view/view-number</property>
-					<value>12</value>
+					<command>nasal</command>
+					<script>libraries.setView(6);</script>
 				</binding>
 				<binding>
 					<condition>
@@ -1283,6 +1277,7 @@
 				<keyboard-mode type="bool">0</keyboard-mode>
 				<map-less-transparent type="bool">0</map-less-transparent>
 				<du n="0">
+					<enable-shaders type="bool">true</enable-shaders>
 					<nd-fps type="double">20</nd-fps>
 					<pfd-fps type="double">20</pfd-fps>
 				</du>
@@ -1333,7 +1328,7 @@
 			<file>Aircraft/MD-80/Nasal/libraries.nas</file>
 			<file>Aircraft/MD-80/Nasal/buttons.nas</file>
 			<file>Aircraft/MD-80/Nasal/shake.nas</file>
-			<file>Aircraft/MD-80/Nasal/zoom-views.nas</file>
+			<file>Aircraft/MD-80/Nasal/view-controller.nas</file>
 			<file>Aircraft/MD-80/Nasal/thunder-effects.nas</file>
 			<file>Aircraft/MD-80/Models/Instruments/ND/ND.nas</file>
 		</libraries>
